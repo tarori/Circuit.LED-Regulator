@@ -1130,15 +1130,15 @@ type 0207, grid 10 mm</description>
 <part name="Q1" library="my_ic" deviceset="NPN" device="2SC3422-2" value="NPN2SC3422-2"/>
 <part name="Q2" library="my_ic" deviceset="NPN" device="2SC3325"/>
 <part name="JP1" library="pinhead" library_urn="urn:adsk.eagle:library:325" deviceset="PINHD-1X3" device="" package3d_urn="urn:adsk.eagle:package:22458/2" value="CON"/>
-<part name="D1" library="my_rcl" deviceset="LED" device="-SMD1608" value="RED"/>
-<part name="D2" library="my_rcl" deviceset="LED" device="-SMD1608" value="BLUE"/>
-<part name="R2" library="my_rcl" deviceset="R" device="-1608" value="DNP"/>
+<part name="D1" library="my_rcl" deviceset="LED" device="-SMD1608" value="SHORT"/>
+<part name="D2" library="my_rcl" deviceset="LED" device="-SMD1608" value="SHORT"/>
+<part name="R2" library="my_rcl" deviceset="R" device="-1608" value="1.5k"/>
 <part name="Q3" library="my_ic" deviceset="PNP" device="2SA1313"/>
-<part name="R1" library="my_rcl" deviceset="R" device="-1608" value="1k"/>
-<part name="R4" library="my_rcl" deviceset="R" device="-1608" value="1k"/>
+<part name="R1" library="my_rcl" deviceset="R" device="-1608" value="1.5k"/>
+<part name="R4" library="my_rcl" deviceset="R" device="-1608" value="1.5k"/>
 <part name="C7" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
-<part name="D3" library="my_rcl" deviceset="LED" device="-SMD1608"/>
-<part name="D4" library="my_rcl" deviceset="LED" device="-SMD1608"/>
+<part name="D3" library="my_rcl" deviceset="LED" device="-SMD1608" value="BLUE"/>
+<part name="D4" library="my_rcl" deviceset="LED" device="-SMD1608" value="BLUE"/>
 </parts>
 <sheets>
 <sheet>
@@ -1158,12 +1158,12 @@ type 0207, grid 10 mm</description>
 <attribute name="VALUE" x="-13.97" y="12.7" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="D1" gate="G$1" x="15.24" y="5.08" smashed="yes">
-<attribute name="NAME" x="11.176" y="0.508" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="10.795" y="5.588" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="11.176" y="-2.032" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="10.795" y="3.048" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="D2" gate="G$1" x="22.86" y="5.08" smashed="yes">
-<attribute name="NAME" x="26.416" y="0.508" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="26.035" y="4.318" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="26.416" y="-2.032" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="26.035" y="3.048" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R2" gate="G$1" x="30.48" y="5.08" smashed="yes" rot="R90">
 <attribute name="NAME" x="28.9814" y="1.27" size="1.778" layer="95" rot="R90"/>
@@ -1174,12 +1174,12 @@ type 0207, grid 10 mm</description>
 <attribute name="VALUE" x="0" y="15.24" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="R1" gate="G$1" x="7.62" y="25.4" smashed="yes" rot="R90">
-<attribute name="NAME" x="6.1214" y="22.86" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="10.922" y="21.59" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="11.2014" y="19.05" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="10.922" y="22.86" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="R4" gate="G$1" x="2.54" y="27.94" smashed="yes" rot="R90">
 <attribute name="NAME" x="1.0414" y="24.13" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="5.842" y="24.13" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="0.762" y="27.94" size="1.778" layer="96" rot="R90"/>
 </instance>
 <instance part="C7" gate="G$1" x="22.86" y="20.32" smashed="yes">
 <attribute name="NAME" x="23.622" y="21.971" size="1.778" layer="95"/>
