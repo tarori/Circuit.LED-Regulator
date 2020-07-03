@@ -1139,6 +1139,7 @@ type 0207, grid 10 mm</description>
 <part name="C7" library="my_rcl" deviceset="C" device="-1608" value="100p"/>
 <part name="D3" library="my_rcl" deviceset="LED" device="-SMD1608" value="BLUE"/>
 <part name="D4" library="my_rcl" deviceset="LED" device="-SMD1608" value="BLUE"/>
+<part name="Q4" library="my_ic" deviceset="NPN" device="2SC3325"/>
 </parts>
 <sheets>
 <sheet>
@@ -1193,6 +1194,10 @@ type 0207, grid 10 mm</description>
 <attribute name="NAME" x="34.036" y="25.908" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="36.195" y="25.908" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="Q4" gate="G$1" x="15.24" y="40.64" smashed="yes" rot="R90">
+<attribute name="NAME" x="15.24" y="45.72" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="17.78" y="45.72" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1237,22 +1242,32 @@ type 0207, grid 10 mm</description>
 <wire x1="-15.24" y1="-7.62" x2="50.8" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="-7.62" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
-<wire x1="20.32" y1="33.02" x2="30.48" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="33.02" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="D4" gate="G$1" pin="A"/>
+<wire x1="22.86" y1="33.02" x2="30.48" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="33.02" x2="50.8" y2="33.02" width="0.1524" layer="91"/>
 <junction x="30.48" y="33.02"/>
+<pinref part="Q4" gate="G$1" pin="E"/>
+<wire x1="20.32" y1="43.18" x2="22.86" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="43.18" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
+<junction x="22.86" y="33.02"/>
 </segment>
 </net>
 <net name="IN" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="C"/>
-<wire x1="10.16" y1="33.02" x2="2.54" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="33.02" x2="7.62" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="33.02" x2="2.54" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="33.02" x2="-15.24" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="33.02" x2="-15.24" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="1"/>
 <wire x1="-15.24" y1="22.86" x2="-17.78" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="2"/>
 <junction x="2.54" y="33.02"/>
+<pinref part="Q4" gate="G$1" pin="C"/>
+<wire x1="7.62" y1="33.02" x2="7.62" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="7.62" y1="43.18" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
+<junction x="7.62" y="33.02"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1285,6 +1300,10 @@ type 0207, grid 10 mm</description>
 <wire x1="5.08" y1="22.86" x2="5.08" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="30.48" x2="7.62" y2="30.48" width="0.1524" layer="91"/>
 <junction x="7.62" y="30.48"/>
+<pinref part="Q4" gate="G$1" pin="B"/>
+<wire x1="15.24" y1="38.1" x2="10.16" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="38.1" x2="10.16" y2="30.48" width="0.1524" layer="91"/>
+<junction x="10.16" y="30.48"/>
 </segment>
 </net>
 <net name="N$10" class="0">
